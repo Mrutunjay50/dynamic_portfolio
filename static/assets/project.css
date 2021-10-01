@@ -1,11 +1,21 @@
 *, *:before, *:after {
     box-sizing: border-box;
 }
+/* all rounder variables mainly for shadows */
+:root{
+    --outer-shadow: 3px 3px 3px #e9ebe8, -3px -3px 3px #fafcf9;
+    --outer-shadow0: 3px 3px 3px #e9ebe8, -3px -3px 3px #fafcf9;
+    --inner-shadow: inset 3px 3px 3px #e5e7e5, inset -3px -3px 3px #f8f8f8;
+    --inner-shadow0: inset 3px 3px 3px #0bb80b, inset -3px -3px 3px #0d970d;
+}
+.outer-shadow{
+    box-shadow: var(--outer-shadow);
+}
 html {
     font-size: 18px;
     line-height: 1.5;
     font-weight: 300;
-    color: whitesmoke;
+    color: rgb(146, 138, 138);
     font-family: "Nunito Sans", sans-serif;
 }
 body {
@@ -13,11 +23,24 @@ body {
     padding: 0;
     height: 100vh;
     background-color:#323232;
-    color: whitesmoke;
+    color: rgb(224, 213, 213);
     background-attachment: fixed;
+}
+.form-group{
+    margin-top: 30px;
 }
 .large {
     font-size: 3rem;
+}
+.container{
+    margin-top: 50px;
+    border-radius: 10px;
+    background-color: whitesmoke;
+    padding: 20px 0;
+    box-shadow: var(--outer-shadow);
+}
+.container:hover{
+    box-shadow: var(--inner-shadow);
 }
 .content {
     display: flex;
@@ -81,6 +104,9 @@ p.overview {
     .card {
         width: 100%;
    }
+}
+.btn-success:hover{
+    box-shadow: var(--inner-shadow0);
 }
 .front, .back {
     display: flex;
